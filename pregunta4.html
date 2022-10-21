@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+    <script>
+
+        const users = [
+            { id: 11, name: 'Adam', age: 23, group: 'editor' },
+            { id: 47, name: 'John', age: 28, group: 'admin' },
+            { id: 85, name: 'William', age: 34, group: 'editor' },
+            { id: 97, name: 'Oliver', age: 28, group: 'admin' },
+            { id: 100, name: 'Vicente', age: 30, group: 'admin' }
+        ];
+
+        total1 = 0
+        total2 = 0
+        console.log("funcional  ")
+        // funcional 
+        users.map(function (element) {
+            if (element.group == 'admin') {
+                total1 += 1
+            }
+            else if (element.group == 'editor') {
+                total2 += 1
+            }
+        });
+
+        console.log({'admin': total1 ,'editor': total2 })
+    </script>
+</body>
+
+</html>
