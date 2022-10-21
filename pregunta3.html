@@ -18,15 +18,28 @@
         total = 0
         console.log("funcional  ")
         // funcional 
-        users.map(function (element) {
 
-            if (element.name.search("i") != -1  && element.group == 'admin' )  {
-                console.log(element.name , "->" , true)
-            }
-            else if(element.name.search("i") != -1  && element.group != 'admin'){
-                console.log(element.name , "->" , false)
-            }
-        });
+        let modifiedArr1 = users.filter(function(element){
+            return element.name.search("i") != -1  && element.group == 'admin'
+        })
+
+        let modifiedArr2 = users.filter(function(element){
+            return element.name.search("i") != -1  && element.group != 'admin'
+        })
+
+
+        modifiedArr1.map(function(element){
+            console.log(element.name , "->" , true)
+        })
+
+        modifiedArr2.map(function(element){
+            console.log(element.name , "->" , false)
+        })
+
+
+
+
+
     </script>
 </body>
 

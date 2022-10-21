@@ -20,14 +20,20 @@
         index = 0
         console.log("funcional  ")
         // funcional 
-        arr.map(function (element) {
-            if (element.species.search('dog') != -1) {
-                index += 1
-                total1 += element.age
-            }
+
+
+        let modifiedArr1 = arr.filter(function (element) {
+            return element.species.search('dog') != -1
+        })
+
+
+        modifiedArr1.map(function (element) {
+            index += 1
+            total1 += element.age
+
         });
 
-        console.log(total2 = total1/index)
+        console.log(total2 = total1 / index)
     </script>
 </body>
 

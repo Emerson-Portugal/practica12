@@ -19,16 +19,26 @@
         total2 = 0
         console.log("funcional  ")
         // funcional 
-        users.map(function (element) {
-            if (element.group == 'admin') {
-                total1 += 1
-            }
-            else if (element.group == 'editor') {
-                total2 += 1
-            }
-        });
 
-        console.log({'admin': total1 ,'editor': total2 })
+        let modifiedArr1 = users.filter(function (element) {
+            return element.group == 'admin'
+        })
+
+        let modifiedArr2 = users.filter(function (element) {
+            return element.group == 'editor'
+        })
+
+
+        modifiedArr1.map(function (element) {
+            return total1 += 1
+        })
+        modifiedArr2.map(function (element) {
+
+            return total2 += 1
+        })
+
+
+        console.log({ 'admin': total1, 'editor': total2 })
     </script>
 </body>
 

@@ -18,12 +18,17 @@
         total = 0
         console.log("funcional  ")
         // funcional 
-        users.map(function (element) {
 
-            if (element.name.search("i") != -1) {
-                console.log(element.name)
-            }
-        });
+        let modifiedArr = users.filter(function(element){
+            return element.name.search("i") != -1
+        })
+
+        modifiedArr.map(function(element){
+            console.log(element.name)
+        })
+
+
+
     </script>
 </body>
 
